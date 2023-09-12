@@ -1,0 +1,45 @@
+---
+
+---
+
+<nav>
+ <div class="container flex sb">
+  <h1 class="fancy">Brian <span class="lastname">Stricker</span></h1>
+  <ul class="flex ul">
+   <li>Home</li>
+   <li>About</li>
+   <li>Skills</li>
+   <li>Projects</li>
+   <li>Contact</li>
+  </ul>
+ </div>
+</nav>
+<style>
+ h1 {
+  font-size: 3rem;
+ }
+ .flex {
+  display: flex;
+  align-items: center;
+ }
+ .sb {
+  justify-content: space-between;
+ }
+ .ul {
+  gap: 2rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  @media screen and (max-width: 768px) {
+   display: none;
+  }
+ }
+ nav {
+  padding: 1.3rem 0;
+  background: rgba(9, 9, 121, 1);
+ }
+ .lastname {
+  @media screen and (max-width: 820px) {
+   display: none;
+  }
+ }
+</style>

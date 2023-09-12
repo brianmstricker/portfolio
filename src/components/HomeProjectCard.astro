@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+const { title, link, image } = Astro.props;
+---
+
+<a href={link} target="_blank" class="card">
+ <h1 class="card-title">{title}</h1>
+ <Image src={image} alt="image" class="image" />
+</a>
+
+<style>
+ .card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  @media screen and (max-width: 500px) {
+   max-width: 95%;
+  }
+ }
+ .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+ .card-title {
+  text-align: center;
+  font-size: 2.5vw;
+  @media screen and (max-width: 480px) {
+   font-size: 4.3vw;
+  }
+ }
+ .image {
+  object-fit: cover;
+  max-width: 100%;
+  height: fit-content;
+  margin: auto;
+ }
+</style>
