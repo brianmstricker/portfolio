@@ -5,7 +5,14 @@ const { title, link, image } = Astro.props;
 
 <a href={link} target="_blank" class="card">
  <h1 class="card-title">{title}</h1>
- <Image src={image} alt="image" class="image" />
+ <Image
+  src={image}
+  alt="project image for {title}"
+  class="image"
+  width={400}
+  height={100}
+  format="avif"
+ />
 </a>
 
 <style>
@@ -19,10 +26,10 @@ const { title, link, image } = Astro.props;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
-  @media screen and (max-width: 500px) {
-   max-width: 95%;
+  @media screen and (max-width: 600px) {
+   max-width: 90%;
   }
  }
  .card:hover {
@@ -31,9 +38,9 @@ const { title, link, image } = Astro.props;
  }
  .card-title {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 2vw;
   @media screen and (max-width: 480px) {
-   font-size: 4.3vw;
+   font-size: 4vw;
   }
  }
  .image {

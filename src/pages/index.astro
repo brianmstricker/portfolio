@@ -6,21 +6,24 @@ import HomeProjectCard from "../components/HomeProjectCard.astro";
 import myblog from "../assets/myblog.png";
 import icongenerator from "../assets/icon-generator-project.png";
 import AboutPage from "../components/AboutPage.astro";
+import ProjectsButton from "../components/ProjectsButton.astro";
 ---
 
 <Layout title="Brian Stricker - Portfolio">
- <main>
+ <main class="rel">
   <div class="main container">
    <div class="row">
     <div style="margin-top:2px;">
      <div class="text">
       <span style="font-size: 1.2rem">Hello, I'm</span>
       <h1 class="name">Brian Stricker</h1>
-      <p style="font-size: 1.6rem; margin-top: .5rem">
+      <p style="font-size: 1.6rem; margin-top: .5rem;">
        I'm a Full Stack Developer.
       </p>
       <div style="margin-top: 1rem; display: flex; flex-direction: column;">
-       <p style="margin-bottom: 1rem;">Check out one of my projects:</p>
+       <p style="margin-bottom: 1rem;">
+        Check out one of my fullstack projects:
+       </p>
       </div>
      </div>
      <div class="cards">
@@ -37,10 +40,18 @@ import AboutPage from "../components/AboutPage.astro";
      </div>
     </div>
     <div>
-     <Image src={me} alt="Brian Stricker" class="profileImage" format="webp" />
+     <Image
+      src={me}
+      alt="Brian Stricker"
+      class="profileImage"
+      format="avif"
+      width={400}
+      height={550}
+     />
     </div>
    </div>
   </div>
+  <ProjectsButton />
  </main>
  <AboutPage />
 </Layout>
@@ -70,6 +81,8 @@ import AboutPage from "../components/AboutPage.astro";
   font-size: 6rem;
   font-weight: 700;
   line-height: 1;
+  position: relative;
+  left: -4px;
   @media screen and (max-width: 900px) {
    font-size: 4rem;
   }
@@ -78,8 +91,8 @@ import AboutPage from "../components/AboutPage.astro";
   }
  }
  .profileImage {
-  object-fit: contain;
-  width: 400px;
+  object-fit: cover;
+  max-width: 100%;
   height: fit-content;
   @media screen and (max-width: 900px) {
    display: none;
@@ -87,7 +100,7 @@ import AboutPage from "../components/AboutPage.astro";
  }
  .cards {
   display: flex;
-  column-gap: 1rem;
+  column-gap: 1.5rem;
   row-gap: 0.5rem;
   @media screen and (max-width: 700px) {
    flex-direction: column;
@@ -98,5 +111,8 @@ import AboutPage from "../components/AboutPage.astro";
   @media screen and (max-width: 550px) {
    max-width: 95%;
   }
+ }
+ .rel {
+  position: relative;
  }
 </style>
