@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import me from "../assets/me.jpg";
+---
+
+<div>
+ <Image
+  src={me}
+  alt="Brian Stricker"
+  class="profileImage"
+  format="avif"
+  width={100}
+  height={100}
+ />
+</div>
+
+<style>
+ .profileImage {
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+ }
+</style>

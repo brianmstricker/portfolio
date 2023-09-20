@@ -1,24 +1,16 @@
-<div class="btn fancy">
- or view all my projects
- <svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke-width="1.5"
-  stroke="currentColor"
-  class="icon"
- >
-  <path
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   d="M15 15l-6 6m0 0l-6-6m6 6V9a6 6 0 0112 0v3"></path>
- </svg>
+---
+import ArrowDown from "./ArrowDown.astro";
+---
+
+<div class="btn">
+ <span>about</span>
+ <ArrowDown />
 </div>
 
 <style>
  .btn {
   position: absolute;
-  bottom: 9rem;
+  bottom: 8rem;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
@@ -34,15 +26,10 @@
   transition: all 0.5s ease-in-out;
   &:hover {
    transform: translateX(-50%) scale(1.1);
-   box-shadow: inset 300px 0 0 0 #2196f3;
+   box-shadow: inset 400px 0 0 0 #2196f3;
   }
   @media screen and (max-width: 700px) {
    display: none;
   }
- }
- .icon {
-  width: 20px;
-  height: 20px;
-  transform: scaleX(-1);
  }
 </style>

@@ -1,5 +1,5 @@
 ---
-
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <nav>
@@ -11,6 +11,7 @@
    <li>Skills</li>
    <li>Projects</li>
    <li>Contact</li>
+   <ThemeToggle />
   </ul>
  </div>
 </nav>
@@ -29,16 +30,17 @@
   gap: 2rem;
   font-size: 1.15rem;
   font-weight: bold;
+ }
+ ul li {
   @media screen and (max-width: 768px) {
    display: none;
   }
  }
  nav {
   padding: 1.3rem 0;
-  background: rgba(9, 9, 121, 1);
  }
  .lastname {
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 900px) {
    display: none;
   }
  }

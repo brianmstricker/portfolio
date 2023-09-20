@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import me from "../assets/me.jpg";
 import HomeProjectCard from "../components/HomeProjectCard.astro";
 import myblog from "../assets/myblog.png";
 import icongenerator from "../assets/icon-generator-project.png";
@@ -18,10 +16,10 @@ import ProjectsButton from "../components/ProjectsButton.astro";
       <span style="font-size: 1.2rem">Hello, I'm</span>
       <h1 class="name">Brian Stricker</h1>
       <p style="font-size: 1.6rem; margin-top: .5rem;">
-       I'm a Full Stack Developer.
+       Aspiring Full Stack Developer.
       </p>
-      <div style="margin-top: 1rem; display: flex; flex-direction: column;">
-       <p style="margin-bottom: 1rem;">
+      <div style="margin-top: 1.5rem; display: flex; flex-direction: column;">
+       <p style="margin-bottom: 1rem; text-decoration: underline;">
         Check out one of my fullstack projects:
        </p>
       </div>
@@ -39,16 +37,6 @@ import ProjectsButton from "../components/ProjectsButton.astro";
       />
      </div>
     </div>
-    <div>
-     <Image
-      src={me}
-      alt="Brian Stricker"
-      class="profileImage"
-      format="avif"
-      width={400}
-      height={550}
-     />
-    </div>
    </div>
   </div>
   <ProjectsButton />
@@ -59,7 +47,6 @@ import ProjectsButton from "../components/ProjectsButton.astro";
 <style>
  .main {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
  }
@@ -69,11 +56,13 @@ import ProjectsButton from "../components/ProjectsButton.astro";
   gap: 4rem;
   padding: 1rem 1rem;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   bottom: -5rem;
   @media screen and (max-width: 900px) {
    display: block;
+  }
+  @media screen and (max-width: 700px) {
    bottom: 1rem;
   }
  }
@@ -84,23 +73,15 @@ import ProjectsButton from "../components/ProjectsButton.astro";
   position: relative;
   left: -4px;
   @media screen and (max-width: 900px) {
-   font-size: 4rem;
+   font-size: 5rem;
   }
   @media screen and (max-width: 700px) {
    font-size: 3rem;
   }
  }
- .profileImage {
-  object-fit: cover;
-  max-width: 100%;
-  height: fit-content;
-  @media screen and (max-width: 900px) {
-   display: none;
-  }
- }
  .cards {
   display: flex;
-  column-gap: 1.5rem;
+  column-gap: 1.75rem;
   row-gap: 0.5rem;
   @media screen and (max-width: 700px) {
    flex-direction: column;
