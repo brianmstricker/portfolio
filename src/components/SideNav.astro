@@ -1,0 +1,72 @@
+---
+import AboutIcon from "./icons/AboutIcon.astro";
+import ContactIcon from "./icons/ContactIcon.astro";
+import HomeIcon from "./icons/HomeIcon.astro";
+import ProjectsIcon from "./icons/ProjectsIcon.astro";
+import SkillsIcon from "./icons/SkillsIcon.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import MenuIcon from "./icons/MenuIcon.astro";
+---
+
+<div>
+ <MenuIcon />
+</div>
+<ul>
+ <li><a><span>Home</span><HomeIcon /></a></li>
+ <li><a><span>About</span><AboutIcon /></a></li>
+ <li><a><span>Skills</span><SkillsIcon /></a></li>
+ <li><a><span>Projects</span><ProjectsIcon /></a></li>
+ <li><a><span>Contact</span><ContactIcon /></a></li>
+ <li><a><span>Theme</span><ThemeToggle /></a></li>
+</ul>
+
+<style>
+ ul {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  right: 1%;
+  top: 2%;
+  padding: 12px 0;
+  border: 1px solid white;
+  border-radius: 30px;
+  z-index: 100;
+  @media screen and (max-width: 720px) {
+   display: none;
+  }
+ }
+ li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+ }
+ li:hover span {
+  display: block;
+ }
+ span {
+  position: absolute;
+  right: 110%;
+  display: none;
+ }
+ a {
+  position: relative;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ div {
+  display: none;
+  position: fixed;
+  right: 4%;
+  top: 4%;
+  z-index: 100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  @media screen and (max-width: 720px) {
+   display: block;
+  }
+ }
+</style>

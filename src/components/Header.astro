@@ -1,18 +1,10 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro";
+
 ---
 
 <nav>
  <div class="container flex sb">
   <h1 class="fancy">Brian <span class="lastname">Stricker</span></h1>
-  <ul class="flex ul">
-   <li>Home</li>
-   <li>About</li>
-   <li>Skills</li>
-   <li>Projects</li>
-   <li>Contact</li>
-   <ThemeToggle />
-  </ul>
  </div>
 </nav>
 <style>
@@ -25,16 +17,6 @@ import ThemeToggle from "./ThemeToggle.astro";
  }
  .sb {
   justify-content: space-between;
- }
- .ul {
-  gap: 2rem;
-  font-size: 1.15rem;
-  font-weight: bold;
- }
- ul li {
-  @media screen and (max-width: 768px) {
-   display: none;
-  }
  }
  nav {
   padding: 1.3rem 0;

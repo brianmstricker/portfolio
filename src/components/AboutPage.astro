@@ -7,14 +7,13 @@ import ArrowDown from "./ArrowDown.astro";
   <div class="container">
    <h2>About</h2>
    <div class="content">
-    My name is Brian Stricker, and I'm an aspiring fullstack developer. I
-    primarily use the MERN stack but I've dabbled with other frameworks and
-    languages.
+    My name is Brian Stricker, and I'm an aspiring fullstack web developer. I
+    primarily focus on using the MERN stack, but I've dabbled with several other
+    frameworks and languages, and I'm never writing anything off. I'm currently
+    working on a few projects, including my fullstack blog, and an Airbnb clone
+    (that is also fullstack).
    </div>
   </div>
- </div>
- <div class="skillButton">
-  <span class="skills">skills</span><ArrowDown />
  </div>
 </main>
 
@@ -35,26 +34,5 @@ import ArrowDown from "./ArrowDown.astro";
  }
  .content {
   max-width: 600px;
- }
- .skillButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: -0.1rem;
-  gap: 8px;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  box-shadow: inset 0 0 0 0 #2196f3;
-  transition: all 0.5s ease-in-out;
-  width: fit-content;
-  margin: 0 auto;
-  &:hover {
-   transform: scale(1.1);
-   box-shadow: inset 400px 0 0 0 #2196f3;
-  }
- }
- .skills {
-  font-size: 1.5rem;
  }
 </style>
