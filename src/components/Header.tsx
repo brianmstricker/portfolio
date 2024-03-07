@@ -1,12 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import { UserCircle } from "./UserCircle";
+import Socials from "./Socials";
 
 const Header = () => {
  return (
   <div className="w-full absolute p-4">
    <header className="flex justify-between items-center">
-    <UserCircle />
+    <div className="flex items-center gap-7">
+     <UserCircle />
+     <Socials />
+    </div>
     <nav>
      <ul className="flex space-x-4">
       <li>

@@ -6,6 +6,6 @@
  background-image: radial-gradient(
   circle farthest-side at var(--x, 0%) var(--y, 0%),
   #c9cccf12 0%,
-  transparent 10%
+  transparent 15%
  );
 }

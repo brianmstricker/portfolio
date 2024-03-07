@@ -7,6 +7,7 @@ export default function Home() {
     <Header />
     <div className="flex flex-col items-center justify-center h-full">
      <div>home content</div>
+     <div>home content</div>
     </div>
    </div>
   </div>

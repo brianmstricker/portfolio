@@ -8,6 +8,7 @@ import {
  useMotionValue,
  useSpring,
 } from "framer-motion";
+import logo from "@/assets/Designer.png";
 
 export const UserCircle = () => {
  const [hovered, setHovered] = useState<boolean | null>(null);
@@ -27,7 +28,7 @@ export const UserCircle = () => {
  };
  return (
   <div
-   className="-mr-4  relative group"
+   className="relative group"
    onMouseEnter={() => setHovered(true)}
    onMouseLeave={() => setHovered(null)}
   >
@@ -51,7 +52,7 @@ export const UserCircle = () => {
        rotate: rotate,
        whiteSpace: "nowrap",
       }}
-      className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+      className="absolute -top-16 -left-3/4 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
      >
       <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
       <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
@@ -64,9 +65,9 @@ export const UserCircle = () => {
    </AnimatePresence>
    <div
     onMouseMove={handleMouseMove}
-    className="rounded-full bg-black/50 p-3 ring ring-white/10 relative w-12 h-12 flex items-center justify-center group-hover:scale-105 group-hover:z-30 transition duration-500"
+    className="rounded-full bg-black/50 p-3 ring ring-white/10 relative w-14 h-14 flex items-center justify-center group-hover:scale-105 group-hover:z-30 transition duration-500"
    >
-    <h1 className="text-2xl font-bold absolute select-none">BS</h1>
+    <Image src={logo} fill alt="logo" />
    </div>
   </div>
  );

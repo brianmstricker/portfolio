@@ -5,6 +5,18 @@ import { useEffect, useRef } from "react";
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
  const ref = useRef<HTMLDivElement>(null);
  useEffect(() => {
+  const hover = window.matchMedia("(hover: none)");
+  if (!hover.matches) {
+   ref.current?.classList.add("gradient");
+  }
+  const handleHoverChange = (e: MediaQueryListEvent) => {
+   if (e.matches) {
+    ref.current?.classList.remove("gradient");
+    return;
+   }
+   ref.current?.classList.add("gradient");
+  };
+  hover.addEventListener("change", handleHoverChange);
   const getMousePosition = (e: MouseEvent) => {
    if (!ref.current) return;
    const x = e.clientX / window.innerWidth;
@@ -14,11 +26,11 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
   };
   window.addEventListener("mousemove", getMousePosition);
   return () => {
-   window.removeEventListener("mousemove", getMousePosition);
+   hover.removeEventListener("change", handleHoverChange);
   };
  }, []);
  return (
-  <div ref={ref} className="bg-black/70 w-full h-full gradient">
+  <div ref={ref} className="bg-black/70 w-full h-full">
    {children}
   </div>
  );
