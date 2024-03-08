@@ -4,7 +4,7 @@ import Socials from "./Socials";
 
 const Header = () => {
  return (
-  <div className="w-full absolute p-4">
+  <div className="w-full absolute">
    <header className="flex justify-between items-center">
     <div className="flex items-center gap-7">
      <UserCircle />
@@ -12,9 +12,6 @@ const Header = () => {
     </div>
     <nav>
      <ul className="flex space-x-4">
-      <li>
-       <Link href="#about">about</Link>
-      </li>
       <li>
        <Link href="#projects">projects</Link>
       </li>

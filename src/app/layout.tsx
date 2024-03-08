@@ -19,7 +19,7 @@ export default function RootLayout({
  return (
   <html lang="en">
    <body
-    className={`bg-main-900 text-main-100 h-screen antialiased ${font.className}`}
+    className={`bg-slate-800/90 text-neutral-200 h-screen antialiased ${font.className}`}
    >
     <Wrapper>
      <div className="container">{children}</div>

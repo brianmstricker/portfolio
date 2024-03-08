@@ -38,7 +38,7 @@ const Socials = () => {
      href={link.href}
      className="transition-all duration-300 flex flex-col items-center group"
     >
-     <div className="absolute text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 top-9 group-hover:-top-2 select-none pointer-events-none bg-black px-2 py-1 rounded-lg bg-opacity-0 group-hover:bg-opacity-100">
+     <div className="absolute text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 -top-20 group-hover:-top-5 select-none pointer-events-none bg-black px-2 py-1 rounded-lg bg-opacity-0 group-hover:bg-opacity-100">
       {link.text}
      </div>
      <span
