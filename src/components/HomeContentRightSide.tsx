@@ -13,7 +13,7 @@ const HomeContentRightSide = ({
  setSection,
 }: HomeContentRightSideProps) => {
  return (
-  <div className="ml-auto">
+  <div className="mx-auto sm:flex sm:w-full sm:justify-end min-h-[314px]">
    {section === "projects" && <Projects />}
    {section === "skills" && <Skills />}
    {section === "contact" && <div>contact</div>}

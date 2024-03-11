@@ -52,10 +52,10 @@ export const UserCircle = () => {
        rotate: rotate,
        whiteSpace: "nowrap",
       }}
-      className="absolute -top-16 -left-3/4 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+      className="absolute top-12 sm:-top-16 sm:-left-3/4 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
      >
-      <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-      <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
+      <div className="absolute inset-x-10 z-30 w-[20%] top-0 sm:bottom-0 sm:top-auto bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
+      <div className="absolute left-2 sm:left-10 w-[40%] z-30 top-0 sm:bottom-0 sm:top-auto bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px" />
       <div className="font-bold text-white relative z-30 text-lg">
        Brian Stricker
       </div>

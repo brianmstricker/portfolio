@@ -18,11 +18,11 @@ const Header = ({ section, setSection }: HeaderProps) => {
  return (
   <div className="w-full absolute mt-4">
    <header className="flex justify-between sm:items-center flex-col sm:flex-row">
-    <div className="flex items-center gap-7">
+    <div className="flex items-center gap-7 justify-between">
      <UserCircle />
      <Socials />
     </div>
-    <nav className="mx-auto sm:mx-0 mt-5 sm:mt-auto">
+    <nav className="mx-auto sm:mx-0 mt-4 sm:mt-0">
      <ul className="flex space-x-4">
       {links.map((link) => (
        <li key={link} className="relative group flex justify-center">

@@ -22,25 +22,30 @@ const images = [
 
 const Skills = () => {
  return (
-  <div className="grid grid-cols-3 gap-x-6 gap-y-3">
-   {images.map((image) => (
-    <div className="group" key={image.text}>
-     <div
-      className={`bg-main py-3 px-4 flex flex-col gap-2 rounded-2xl shadow-md mx-auto w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] ${image.style}`}
-     >
-      <Image
-       className="object-contain mx-auto w-full h-full"
-       src={image.name}
-       alt={image.text}
-       width={50}
-       height={50}
-      />
+  <div>
+   <h2 className="text-center font-bold mb-1 sm:mb-4 text-2xl sm:hidden">
+    Skills
+   </h2>
+   <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+    {images.map((image) => (
+     <div className="group" key={image.text}>
+      <div
+       className={`bg-main py-3 px-2 sm:px-4 flex flex-col gap-2 rounded-2xl shadow-md mx-auto w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] ${image.style}`}
+      >
+       <Image
+        className="object-contain mx-auto w-full h-full"
+        src={image.name}
+        alt={image.text}
+        width={50}
+        height={50}
+       />
+      </div>
+      <p className="text-center mx-auto text-[11px] sm:text-sm mt-2 w-fit">
+       {image.text}
+      </p>
      </div>
-     <p className="text-center mx-auto text-xs lg:text-sm mt-2 w-fit">
-      {image.text}
-     </p>
-    </div>
-   ))}
+    ))}
+   </div>
   </div>
  );
 };
