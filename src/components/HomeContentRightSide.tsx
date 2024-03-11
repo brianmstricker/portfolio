@@ -1,5 +1,8 @@
 "use client";
 
+import Projects from "./Projects";
+import Skills from "./Skills";
+
 type HomeContentRightSideProps = {
  section: string;
  setSection: (section: string) => void;
@@ -11,8 +14,8 @@ const HomeContentRightSide = ({
 }: HomeContentRightSideProps) => {
  return (
   <div className="ml-auto">
-   {section === "projects" && <div>projects</div>}
-   {section === "skills" && <div>skills</div>}
+   {section === "projects" && <Projects />}
+   {section === "skills" && <Skills />}
    {section === "contact" && <div>contact</div>}
   </div>
  );

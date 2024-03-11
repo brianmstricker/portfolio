@@ -16,18 +16,18 @@ const Header = ({ section, setSection }: HeaderProps) => {
   setSection(name);
  };
  return (
-  <div className="w-full absolute">
-   <header className="flex justify-between items-center">
+  <div className="w-full absolute mt-4">
+   <header className="flex justify-between sm:items-center flex-col sm:flex-row">
     <div className="flex items-center gap-7">
      <UserCircle />
      <Socials />
     </div>
-    <nav>
+    <nav className="mx-auto sm:mx-0 mt-5 sm:mt-auto">
      <ul className="flex space-x-4">
       {links.map((link) => (
        <li key={link} className="relative group flex justify-center">
         <button
-         className={cn(section === link && "text-stone-400")}
+         className={cn(section === link && "text-stone-400 cursor-default")}
          onClick={onButtonClick}
          name={link}
         >
