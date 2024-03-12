@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/utils/cn";
 import ProjectNames from "./ProjectNames";
 import Skills from "./Skills";
 
@@ -16,7 +17,7 @@ const HomeContentRightSide = ({
  setProject,
 }: HomeContentRightSideProps) => {
  return (
-  <div className="mx-auto sm:flex sm:w-full sm:justify-end min-h-[314px] sm:min-h-0">
+  <div className="mx-auto sm:flex sm:w-full sm:justify-end sm:order-2">
    {section === "projects" && (
     <ProjectNames
      projectNames={projectNames}

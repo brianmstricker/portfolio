@@ -22,7 +22,7 @@ const ProjectNames = ({
   }
  };
  return (
-  <div className="flex flex-col gap-4">
+  <div className="flex flex-col gap-4 sm:static sm:w-auto">
    {projectNames.map((projName) => (
     <div
      onClick={handleClick}
@@ -44,7 +44,7 @@ const ProjectNames = ({
        <IoClose className="text-red-500" />
       </div>
      )}
-     <span>{projName}</span>
+     <span className="text-sm lg:text-lg">{projName}</span>
      {project !== projName && (
       <div className="w-full h-[2px] rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />
      )}
