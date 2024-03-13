@@ -7,7 +7,7 @@ type AboutProps = {
 
 const About = ({ project, section }: AboutProps) => {
  return (
-  <div>
+  <>
    {(!project || section !== "projects") && (
     <div className={cn(section !== "about" && "hidden sm:block")}>
      <div className="flex flex-col max-w-fit mx-auto sm:mx-0">
@@ -24,7 +24,7 @@ const About = ({ project, section }: AboutProps) => {
      </p>
     </div>
    )}
-  </div>
+  </>
  );
 };
 export default About;

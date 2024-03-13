@@ -25,7 +25,6 @@ const links = [
   hoverColor: "text-red-500",
  },
 ];
-//todo: fill color
 const Socials = () => {
  const [hovered, setHovered] = useState<string | null>(null);
  return (

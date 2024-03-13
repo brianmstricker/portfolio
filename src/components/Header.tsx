@@ -8,7 +8,7 @@ type HeaderProps = {
  setSection: (section: string) => void;
 };
 
-const links = ["projects", "about", "skills", "contact"];
+const links = ["about", "projects", "skills", "contact"];
 
 const Header = ({ section, setSection }: HeaderProps) => {
  const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {

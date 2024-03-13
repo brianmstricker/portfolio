@@ -22,7 +22,7 @@ const ProjectNames = ({
   }
  };
  return (
-  <div className="flex flex-col gap-4 sm:static sm:w-auto">
+  <div className="flex flex-col sm:gap-4 sm:static sm:w-auto">
    {projectNames.map((projName) => (
     <div
      onClick={handleClick}
