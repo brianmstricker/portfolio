@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/utils/cn";
 import ProjectNames from "./ProjectNames";
 import Skills from "./Skills";
 
@@ -26,7 +25,6 @@ const HomeContentRightSide = ({
     />
    )}
    {section === "skills" && <Skills />}
-   {section === "contact" && <div>contact</div>}
   </div>
  );
 };

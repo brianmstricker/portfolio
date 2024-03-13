@@ -12,7 +12,7 @@ const About = ({ project, section }: AboutProps) => {
     <div className={cn(section !== "about" && "hidden sm:block")}>
      <div className="flex flex-col max-w-fit mx-auto sm:mx-0">
       <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-widest">
-       Welcome.
+       Welcome
       </h1>
       <div className="w-full h-1 rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />
      </div>

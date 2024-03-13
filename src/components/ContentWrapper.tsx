@@ -58,7 +58,7 @@ const ContentWrapper = () => {
        {projects
         .filter((proj) => proj.name === project)
         .map((proj) => (
-         <div key={proj.name}>
+         <div key={proj.name} id="projectDiv">
           <div className="text-center font-bold text-xl mb-2">{proj.name}</div>
           <Carousel images={proj.images} projName={proj.name} />
           <div>
