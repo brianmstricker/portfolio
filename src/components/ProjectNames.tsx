@@ -14,11 +14,16 @@ const ProjectNames = ({
 }: ProjectNamesProps) => {
  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
   const name = e.currentTarget.id;
+  const projectDiv = document.getElementById("projectDiv");
   if (name !== project) {
    setProject(name);
   }
   if (name === project) {
-   setProject(null);
+   projectDiv?.classList.remove("animate-slideIn");
+   projectDiv?.classList.add("animate-slideOut");
+   setTimeout(() => {
+    setProject(null);
+   }, 800);
   }
  };
  return (

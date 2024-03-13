@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import HomeContentRightSide from "./HomeContentRightSide";
 import airbnb from "../assets/airbnb.png";
@@ -35,6 +35,21 @@ const projects = [
 const ContentWrapper = () => {
  const [section, setSection] = useState("projects");
  const [project, setProject] = useState<null | string>(null);
+ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+ useEffect(() => {
+  const handleResize = () => {
+   setWindowWidth(window.innerWidth);
+  };
+  window.addEventListener("resize", handleResize);
+  return () => {
+   window.removeEventListener("resize", handleResize);
+  };
+ }, []);
+ useEffect(() => {
+  if (windowWidth > 640 && section === "about") {
+   setSection("projects");
+  }
+ }, [section, windowWidth]);
  return (
   <div className="h-full sm:max-h-[80%] w-full relative">
    <Header section={section} setSection={setSection} />
@@ -58,7 +73,7 @@ const ContentWrapper = () => {
        {projects
         .filter((proj) => proj.name === project)
         .map((proj) => (
-         <div key={proj.name} id="projectDiv">
+         <div key={proj.name} id="projectDiv" className="animate-slideIn">
           <div className="text-center font-bold text-xl mb-2">{proj.name}</div>
           <Carousel images={proj.images} projName={proj.name} />
           <div>

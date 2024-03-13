@@ -9,7 +9,9 @@ const About = ({ project, section }: AboutProps) => {
  return (
   <>
    {(!project || section !== "projects") && (
-    <div className={cn(section !== "about" && "hidden sm:block")}>
+    <div
+     className={cn(section !== "about" && "hidden sm:block fadeIn opacity-0")}
+    >
      <div className="flex flex-col max-w-fit mx-auto sm:mx-0">
       <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-widest">
        Welcome

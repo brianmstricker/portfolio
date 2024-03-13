@@ -23,9 +23,6 @@ const images = [
 const Skills = () => {
  return (
   <div>
-   <h2 className="text-center font-bold mb-1 sm:mb-4 text-2xl sm:hidden">
-    Skills
-   </h2>
    <div className="grid grid-cols-3 gap-x-4 gap-y-3">
     {images.map((image) => (
      <div className="group" key={image.text}>

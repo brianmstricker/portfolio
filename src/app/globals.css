@@ -15,6 +15,10 @@
  animation: fadeIn 1.25s forwards;
 }
 
+.fadeIn {
+ animation: fadeIn 1.25s forwards;
+}
+
 @keyframes fadeIn {
  to {
   opacity: 1;
@@ -24,6 +28,9 @@
 #projectDiv {
  opacity: 0;
  transform: translateX(20%);
+}
+
+.animate-slideIn {
  animation: slideIn 1s forwards;
 }
 
@@ -31,5 +38,20 @@
  to {
   opacity: 1;
   transform: translateX(0);
+ }
+}
+
+.animate-slideOut {
+ animation: slideOut 1s forwards;
+}
+
+@keyframes slideOut {
+ from {
+  opacity: 1;
+  transform: translateX(0);
+ }
+ to {
+  opacity: 0;
+  transform: translateX(20%);
  }
 }
