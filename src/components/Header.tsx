@@ -16,7 +16,7 @@ const Header = ({ section, setSection }: HeaderProps) => {
   setSection(name);
  };
  return (
-  <div className="w-full absolute mt-4">
+  <div className="w-full mt-16">
    <header className="flex justify-between sm:items-center flex-col sm:flex-row">
     <div className="flex items-center gap-7 justify-between">
      <UserCircle />
@@ -27,10 +27,7 @@ const Header = ({ section, setSection }: HeaderProps) => {
       {links.map((link) => (
        <li
         key={link}
-        className={cn(
-         "relative group flex justify-center",
-         link === "about" && "block sm:hidden"
-        )}
+        className={cn("relative group flex justify-center", link === "about" && "block sm:hidden")}
        >
         <button
          className={cn(section === link && "text-stone-400 cursor-default")}

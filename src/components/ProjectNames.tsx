@@ -7,11 +7,7 @@ type ProjectNamesProps = {
  setProject: (project: string | null) => void;
 };
 
-const ProjectNames = ({
- projectNames,
- project,
- setProject,
-}: ProjectNamesProps) => {
+const ProjectNames = ({ projectNames, project, setProject }: ProjectNamesProps) => {
  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
   const name = e.currentTarget.id;
   const projectDiv = document.getElementById("projectDiv");

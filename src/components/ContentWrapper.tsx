@@ -27,16 +27,16 @@ const projects = [
   name: "Chirp - Twitter Clone",
   images: [chirp],
   text: "React, Next.js 14, Tailwind, Drizzle ORM, Typescript",
-  description:
-   "A clone of the Twitter website, including a full user authentication system.",
+  description: "A clone of the Twitter website, including a full user authentication system.",
  },
 ];
 
 const ContentWrapper = () => {
  const [section, setSection] = useState("projects");
  const [project, setProject] = useState<null | string>(null);
- const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+ const [windowWidth, setWindowWidth] = useState(0);
  useEffect(() => {
+  if (!window) return;
   const handleResize = () => {
    setWindowWidth(window.innerWidth);
   };
@@ -51,11 +51,11 @@ const ContentWrapper = () => {
   }
  }, [section, windowWidth]);
  return (
-  <div className="h-full sm:max-h-[80%] w-full relative">
+  <div className="h-full min-h-screen w-full relative flex flex-col">
    <Header section={section} setSection={setSection} />
    <div
     className={cn(
-     "h-full sm:grid gap-2 sm:gap-4 sm:items-center mt-32 sm:mt-0 flex flex-col max-h-[80%] sm:max-h-full sm:justify-normal",
+     "flex-1 h-full overflow-hidden sm:grid gap-2 sm:gap-4 sm:items-center mt-6 sm:mt-0 flex flex-col  sm:max-h-full sm:justify-normal",
      project && "grid-cols-[2fr_1fr] md:grid-cols-[2.5fr_1fr]",
      !project && "sm:grid-cols-2"
     )}
@@ -78,13 +78,10 @@ const ContentWrapper = () => {
           <Carousel images={proj.images} projName={proj.name} />
           <div>
            <div className="text-stone-200/90 mt-1">
-            <span className="font-bold text-white">Built with:</span>{" "}
-            {proj.text}
+            <span className="font-bold text-white">Built with:</span> {proj.text}
            </div>
            <div className="w-full h-2 bg-stone-800/80 rounded-full my-2" />
-           <div className="mt-1 text-sm leading-snug sm:leading-normal">
-            {proj.description}
-           </div>
+           <div className="mt-1 text-sm leading-snug sm:leading-normal">{proj.description}</div>
           </div>
          </div>
         ))}

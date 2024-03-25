@@ -5,13 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { cn } from "@/utils/cn";
 
-const Carousel = ({
- images,
- projName,
-}: {
- images: StaticImageData[];
- projName: string;
-}) => {
+const Carousel = ({ images, projName }: { images: StaticImageData[]; projName: string }) => {
  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
  const scrollPrev = useCallback(() => {
   if (emblaApi) emblaApi.scrollPrev();
@@ -30,7 +24,7 @@ const Carousel = ({
         alt={projName}
         width={2000}
         className="object-contain"
-        sizes="(max-width: 768px) 35vw, (max-width: 1200px) 50vw, 60vw"
+        sizes="(max-width: 768px) 60vw, (max-width: 1200px) 50vw, 45vw"
        />
       </div>
      ))}

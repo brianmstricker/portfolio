@@ -30,7 +30,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
   };
  }, []);
  return (
-  <div ref={ref} className="bg-stone-100/5 w-full h-full">
+  <div ref={ref} className="bg-stone-100/5 w-full h-full min-h-screen">
    {children}
   </div>
  );
