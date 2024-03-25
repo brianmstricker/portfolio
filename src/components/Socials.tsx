@@ -51,7 +51,7 @@ const Socials = () => {
        {link.icon}
       </span>
      </Link>
-     <div className="bg-black/40 backdrop-blur-[2px] transition-all duration-150 ease-in fixed inset-0 w-full h-full z-[2] pointer-events-none hidden group-hover:block" />
+     <div className="bg-black/40 backdrop-blur-[2px] fixed z-[2] pointer-events-none w-0 h-0 group-hover:w-full group-hover:h-full transition-all duration-300 ease-in group-hover:inset-0 top-1/2 bottom-1/2 left-1/2 right-1/2" />
     </div>
    ))}
   </div>
