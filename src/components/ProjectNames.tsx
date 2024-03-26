@@ -1,4 +1,6 @@
+"use client";
 import { cn } from "@/utils/cn";
+import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 type ProjectNamesProps = {
@@ -8,18 +10,24 @@ type ProjectNamesProps = {
 };
 
 const ProjectNames = ({ projectNames, project, setProject }: ProjectNamesProps) => {
+ const [finished, setFinished] = useState(true);
  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  if (!finished) return;
   const name = e.currentTarget.id;
   const projectDiv = document.getElementById("projectDiv");
   if (name !== project) {
    setProject(name);
   }
   if (name === project) {
+   setFinished(false);
    projectDiv?.classList.remove("animate-slideIn");
    projectDiv?.classList.add("animate-slideOut");
    setTimeout(() => {
     setProject(null);
    }, 800);
+   setTimeout(() => {
+    setFinished(true);
+   }, 1000);
   }
  };
  return (
@@ -46,9 +54,7 @@ const ProjectNames = ({ projectNames, project, setProject }: ProjectNamesProps) 
       </div>
      )}
      <span className="text-sm lg:text-lg">{projName}</span>
-     {project !== projName && (
-      <div className="w-full h-[2px] rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />
-     )}
+     {project !== projName && <div className="w-full h-[2px] rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />}
     </div>
    ))}
   </div>
