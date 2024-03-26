@@ -55,7 +55,7 @@ const ContentWrapper = () => {
    <Header section={section} setSection={setSection} />
    <div
     className={cn(
-     "flex-1 h-full overflow-hidden sm:grid gap-2 sm:gap-4 sm:items-center mt-6 sm:mt-0 flex flex-col  sm:max-h-full sm:justify-normal",
+     "flex-1 h-full overflow-hidden sm:grid gap-2 sm:gap-4 sm:items-center mt-6 sm:mt-0 flex flex-col  sm:max-h-full sm:justify-normal mb-20",
      project && "grid-cols-[2fr_1fr] md:grid-cols-[2.5fr_1fr]",
      !project && "sm:grid-cols-2"
     )}

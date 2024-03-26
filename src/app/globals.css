@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 .gradient {
- background-image: radial-gradient(
-  circle farthest-side at var(--x, 0%) var(--y, 0%),
-  #dde0e312 0%,
-  transparent 25%
- );
+ background-image: radial-gradient(circle farthest-side at var(--x, 0%) var(--y, 0%), #dde0e312 0%, transparent 25%);
 }
 
 #homeDiv {
@@ -53,5 +49,28 @@
  to {
   opacity: 0;
   transform: translateX(20%);
+ }
+}
+
+#text-animation {
+ @apply bg-clip-text;
+ animation: textAnimation 2s infinite linear alternate;
+}
+
+@keyframes textAnimation {
+ 0% {
+  @apply text-white;
+ }
+ 25% {
+  @apply text-transparent bg-gradient-to-r from-yellow-200 to-white;
+ }
+ 50% {
+  @apply text-transparent bg-gradient-to-r from-yellow-200 via-yellow-300 to-white;
+ }
+ 75% {
+  @apply text-transparent bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600;
+ }
+ 100% {
+  @apply text-transparent bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600;
  }
 }

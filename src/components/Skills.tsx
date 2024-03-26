@@ -25,21 +25,13 @@ const Skills = () => {
   <div>
    <div className="grid grid-cols-3 gap-x-4 gap-y-3">
     {images.map((image) => (
-     <div className="group" key={image.text}>
+     <div className="group select-none pointer-events-none" key={image.text}>
       <div
        className={`bg-main py-3 px-2 sm:px-4 flex flex-col gap-2 rounded-2xl shadow-md mx-auto w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] ${image.style}`}
       >
-       <Image
-        className="object-contain mx-auto w-full h-full"
-        src={image.name}
-        alt={image.text}
-        width={50}
-        height={50}
-       />
+       <Image className="object-contain mx-auto w-full h-full" src={image.name} alt={image.text} width={50} height={50} />
       </div>
-      <p className="text-center mx-auto text-[11px] sm:text-sm mt-2 w-fit">
-       {image.text}
-      </p>
+      <p className="text-center mx-auto text-[11px] sm:text-sm mt-2 w-fit">{image.text}</p>
      </div>
     ))}
    </div>
