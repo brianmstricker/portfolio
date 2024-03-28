@@ -51,11 +51,11 @@ const ContentWrapper = () => {
   }
  }, [section, windowWidth]);
  return (
-  <div className="h-full min-h-screen w-full relative flex flex-col">
+  <div id="contentWrapper" className="h-full min-h-screen w-full relative flex flex-col">
    <Header section={section} setSection={setSection} />
    <div
     className={cn(
-     "flex-1 h-full overflow-hidden sm:grid gap-2 sm:gap-4 sm:items-center mt-6 sm:mt-0 flex flex-col  sm:max-h-full sm:justify-normal mb-20",
+     "flex-1 h-full sm:grid gap-10 xl:gap-0 sm:items-center mt-6 sm:mt-0 flex flex-col  sm:max-h-full sm:justify-normal mb-20",
      project && "grid-cols-[2fr_1fr] md:grid-cols-[2.5fr_1fr]",
      !project && "sm:grid-cols-2"
     )}
@@ -63,10 +63,12 @@ const ContentWrapper = () => {
     <HomeContentRightSide
      section={section}
      projectNames={projects.map((project) => project.name)}
+     projectSites={projects.map((project) => project.site)}
+     projectCodes={projects.map((project) => project.code)}
      project={project}
      setProject={setProject}
     />
-    <div className="my-1 sm:my-0 sm:order-1">
+    <div className="my-1 sm:my-0 sm:order-1 overflow-hidden">
      <About project={project} section={section} />
      {project && section === "projects" && (
       <div className="mx-auto sm:mx-0 mt-2 sm:mt-8">

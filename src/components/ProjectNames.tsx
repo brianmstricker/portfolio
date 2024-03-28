@@ -5,13 +5,15 @@ import { IoClose } from "react-icons/io5";
 
 type ProjectNamesProps = {
  projectNames: string[];
+ projectSites: (string | undefined)[];
+ projectCodes: (string | undefined)[];
  project: string | null;
  setProject: (project: string | null) => void;
 };
 
-const ProjectNames = ({ projectNames, project, setProject }: ProjectNamesProps) => {
+const ProjectNames = ({ projectNames, project, setProject, projectCodes, projectSites }: ProjectNamesProps) => {
  const [finished, setFinished] = useState(true);
- const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+ const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   if (!finished) return;
   const name = e.currentTarget.id;
   const projectDiv = document.getElementById("projectDiv");
@@ -31,20 +33,21 @@ const ProjectNames = ({ projectNames, project, setProject }: ProjectNamesProps) 
   }
  };
  return (
-  <div className="flex flex-col sm:gap-4 sm:static sm:w-auto">
+  <div className="flex flex-col sm:gap-4 lg:w-[275px] xl:w-[300px]">
    {projectNames.map((projName) => (
-    <div
+    <button
      onClick={handleClick}
      key={projName}
      id={projName}
+     tabIndex={project === projName ? -1 : 0}
      className={cn(
-      "font-semibold text-xl w-fit transition-all duration-300 ease-in-out group project-name relative cursor-pointer",
+      "font-semibold text-xl w-fit transition-all duration-300 ease-in-out group project-name relative cursor-pointer outline-none",
       project === projName && "text-stone-400 hover:text-stone-400/70",
-      project !== projName && "hover:scale-110"
+      project !== projName && "hover:scale-110 lg:hover:tracking-wider focus:scale-110 lg:focus:tracking-widest"
      )}
     >
      {project !== projName && (
-      <div className="absolute -left-4 bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600 text-transparent bg-clip-text opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+      <div className="absolute -left-4 bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600 text-transparent bg-clip-text opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out group-focus:opacity-100">
        •
       </div>
      )}
@@ -55,7 +58,7 @@ const ProjectNames = ({ projectNames, project, setProject }: ProjectNamesProps) 
      )}
      <span className="text-sm lg:text-lg">{projName}</span>
      {project !== projName && <div className="w-full h-[2px] rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />}
-    </div>
+    </button>
    ))}
   </div>
  );

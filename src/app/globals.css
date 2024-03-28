@@ -52,25 +52,26 @@
  }
 }
 
-#text-animation {
- @apply bg-clip-text;
- animation: textAnimation 2s infinite linear alternate;
+#contentWrapper:has(.socials:hover) > *:not(:has(.socials)),
+#contentWrapper:has(.socials:focus) > *:not(:has(.socials)) {
+ transition: all 0.3s;
+ opacity: 0.1;
+ filter: blur(2px);
+}
+#contentWrapper:has(.socials:hover) header nav,
+#contentWrapper:has(.socials:hover) header .userCircle,
+#contentWrapper:has(.socials:focus) header nav,
+#contentWrapper:has(.socials:focus) header .userCircle {
+ transition: all 0.3s;
+ opacity: 0.1;
+ filter: blur(2px);
 }
 
-@keyframes textAnimation {
- 0% {
-  @apply text-white;
- }
- 25% {
-  @apply text-transparent bg-gradient-to-r from-yellow-200 to-white;
- }
- 50% {
-  @apply text-transparent bg-gradient-to-r from-yellow-200 via-yellow-300 to-white;
- }
- 75% {
-  @apply text-transparent bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600;
- }
- 100% {
-  @apply text-transparent bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600;
- }
+#contentWrapper:has(.socials) > *:not(:has(.socials)),
+#contentWrapper:has(.socials) > *:not(:has(.socials)),
+#contentWrapper:has(.socials) header nav,
+#contentWrapper:has(.socials) header .userCircle,
+#contentWrapper:has(.socials) header nav,
+#contentWrapper:has(.socials) header .userCircle {
+ transition: all 0.75s;
 }

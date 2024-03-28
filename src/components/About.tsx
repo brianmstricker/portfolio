@@ -11,9 +11,7 @@ const About = ({ project, section }: AboutProps) => {
    {(!project || section !== "projects") && (
     <div className={cn(section !== "about" && "hidden sm:block fadeIn opacity-0")}>
      <div className="flex flex-col max-w-fit mx-auto sm:mx-0">
-      <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-widest" id="text-animation">
-       Welcome
-      </h1>
+      <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-widest">Welcome</h1>
       <div className="w-full h-1 rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />
      </div>
      <p className="mt-4 sm:mt-6 max-w-[43ch] sm:max-w-[37ch] lg:max-w-prose text-stone-400 mx-auto sm:mx-0 text-[15px] sm:text-lg leading-snug sm:leading-normal">
