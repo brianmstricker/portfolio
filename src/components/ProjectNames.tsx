@@ -52,7 +52,7 @@ const ProjectNames = ({ projectNames, project, setProject, projectCodes, project
       </div>
      )}
      {project === projName && (
-      <div className="absolute -left-4 top-2 lg:-left-5 lg:top-1 transition-all duration-300 ease-in-out">
+      <div className="absolute -left-4 top-2 lg:-left-5 lg:top-1.5 transition-all duration-300 ease-in-out">
        <IoClose className="text-red-500 text-sm lg:text-base" />
       </div>
      )}

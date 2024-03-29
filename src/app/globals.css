@@ -75,3 +75,26 @@
 #contentWrapper:has(.socials) header .userCircle {
  transition: all 0.75s;
 }
+
+.codeLink::before {
+ content: "Code";
+ position: absolute;
+ top: -20px;
+ left: 50%;
+ transform: translateX(-50%);
+ opacity: 0;
+ transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.siteLink::before {
+ content: "Site";
+ position: absolute;
+ top: -20px;
+ left: 50%;
+ transform: translateX(-50%);
+ opacity: 0;
+ transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.codeLink:hover::before,
+.siteLink:hover::before {
+ opacity: 1;
+}
