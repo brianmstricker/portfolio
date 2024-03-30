@@ -22,8 +22,8 @@ export const UserCircle = () => {
    onFocus={() => setHovered(true)}
    onBlur={() => setHovered(null)}
   >
-   <AnimatePresence mode="wait">
-    {hovered && (
+   {hovered && (
+    <AnimatePresence mode="wait">
      <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.4 }}
       animate={{
@@ -49,8 +49,8 @@ export const UserCircle = () => {
       <div className="font-bold text-white relative z-30 text-lg">Brian Stricker</div>
       <div className="text-white text-xs">Software Developer</div>
      </motion.div>
-    )}
-   </AnimatePresence>
+    </AnimatePresence>
+   )}
    <div
     onMouseMove={handleMouseMove}
     tabIndex={0}
