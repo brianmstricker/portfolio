@@ -14,14 +14,18 @@ const ProjectCard = ({
     <h3 className="font-bold text-2xl absolute left-0 min-[400px]:left-1/2 min-[400px]:-translate-x-1/2 w-max">{proj.name}</h3>
     <div className="flex items-center gap-4 text-lg">
      {proj.code && (
-      <Link href={proj.code} className="p-2 rounded-md relative codeLink text-sm transition-all duration-300 hover:bg-black">
-       <FaCode />
-      </Link>
+      <div className="codeLink relative text-sm rounded-md transition-all duration-300 hover:bg-black focus-within:bg-black">
+       <Link href={proj.code} target="_blank" className="block p-2 outline-none">
+        <FaCode />
+       </Link>
+      </div>
      )}
      {proj.site && (
-      <Link href={proj.site} className="p-2 rounded-md relative siteLink text-sm transition-all duration-300 hover:bg-black">
-       <FaLink />
-      </Link>
+      <div className="siteLink relative text-sm rounded-md transition-all duration-300 hover:bg-black focus-within:bg-black">
+       <Link href={proj.site} target="_blank" className="block p-2 outline-none">
+        <FaLink />
+       </Link>
+      </div>
      )}
     </div>
    </div>

@@ -79,7 +79,7 @@
 .codeLink::before {
  content: "Code";
  position: absolute;
- top: -20px;
+ top: -24px;
  left: 50%;
  transform: translateX(-50%);
  opacity: 0;
@@ -88,13 +88,15 @@
 .siteLink::before {
  content: "Site";
  position: absolute;
- top: -20px;
+ top: -24px;
  left: 50%;
  transform: translateX(-50%);
  opacity: 0;
  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 .codeLink:hover::before,
-.siteLink:hover::before {
+.siteLink:hover::before,
+.codeLink:focus-within::before,
+.siteLink:focus-within::before {
  opacity: 1;
 }
