@@ -11,7 +11,6 @@ import airbnb10 from "../assets/airbnb10.png";
 import chirp from "../assets/chirp.png";
 import { cn } from "@/utils/cn";
 import About from "./About";
-import Carousel from "./Carousel";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -19,7 +18,7 @@ const projects = [
   name: "Airbnb Clone",
   images: [airbnb, airbnb1, airbnb2, airbnb7, airbnb9, airbnb10],
   text: "React, Next.js, Tailwind, Prisma, Typescript",
-  site: "https://airbnb-clone-j9ko42tnx-brianmstrickers-projects.vercel.app/",
+  site: "https://airbnb.brianstricker.com/",
   code: "https://github.com/brianmstricker/airbnb-clone",
   description:
    "This is a clone of Airbnb that comes with full booking functionality, image carousels, complete filter and search features, sleek animations, image display modals that are shareable, favorites, and a sleek mobile design.",
