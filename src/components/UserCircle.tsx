@@ -56,7 +56,7 @@ export const UserCircle = () => {
     tabIndex={0}
     className="rounded-full bg-black/50 p-3 ring ring-white/10 relative w-14 h-14 flex items-center justify-center group-hover:scale-105 group-hover:z-30 transition duration-500"
    >
-    <Image src={logo} fill alt="logo" sizes="60px" />
+    <Image src={logo} fill alt="logo" sizes="60px" loading="eager" />
    </div>
   </div>
  );
