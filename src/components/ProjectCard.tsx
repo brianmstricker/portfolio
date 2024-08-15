@@ -11,8 +11,8 @@ const ProjectCard = ({
  return (
   <div key={proj.name} id="projectDiv" className="animate-slideIn">
    <div className="mb-4 flex items-center relative justify-end">
-    <h3 className="font-bold text-2xl absolute left-0 min-[400px]:left-1/2 min-[400px]:-translate-x-1/2 w-max">{proj.name}</h3>
-    <div className="flex items-center gap-4 text-lg">
+    <h3 className="font-bold text-xl md:text-2xl absolute left-1/2 -translate-x-1/2 w-max mb-4">{proj.name}</h3>
+    <div className="flex items-center gap-4 text-lg mt-6 -mb-2">
      {proj.code && (
       <div className="codeLink relative text-sm rounded-md transition-all duration-300 hover:bg-black focus-within:bg-black">
        <Link href={proj.code} target="_blank" className="block p-2 outline-none">

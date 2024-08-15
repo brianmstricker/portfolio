@@ -9,9 +9,18 @@ type HomeContentRightSideProps = {
  projectCodes: (string | undefined)[];
  project: string | null;
  setProject: (project: string | null) => void;
+ projectTags: (string | undefined)[];
 };
 
-const HomeContentRightSide = ({ section, projectNames, projectSites, projectCodes, project, setProject }: HomeContentRightSideProps) => {
+const HomeContentRightSide = ({
+ section,
+ projectNames,
+ projectSites,
+ projectCodes,
+ project,
+ setProject,
+ projectTags,
+}: HomeContentRightSideProps) => {
  return (
   <div className="mx-auto sm:flex sm:w-full sm:justify-end sm:order-2">
    {section === "projects" && (
@@ -21,6 +30,7 @@ const HomeContentRightSide = ({ section, projectNames, projectSites, projectCode
      setProject={setProject}
      projectSites={projectSites}
      projectCodes={projectCodes}
+     projectTags={projectTags}
     />
    )}
    {section === "skills" && <Skills />}

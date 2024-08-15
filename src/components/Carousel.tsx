@@ -1,6 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { cn } from "@/utils/cn";
@@ -20,6 +20,7 @@ const Carousel = ({ images, projName }: { images: StaticImageData[]; projName: s
      {images.map((image, i) => (
       <div key={i} style={{ minWidth: 0, flex: "0 0 100%" }}>
        <Image
+        placeholder="blur"
         src={image}
         alt={projName}
         width={2000}
@@ -37,12 +38,7 @@ const Carousel = ({ images, projName }: { images: StaticImageData[]; projName: s
     )}
     onClick={scrollPrev}
    >
-    <FaChevronLeft
-     className={cn(
-      "fill-white w-4 h-4 relative -left-[1px]",
-      projName === "Chirp - Twitter Clone" && "fill-black"
-     )}
-    />
+    <FaChevronLeft className={cn("fill-white w-4 h-4 relative -left-[1px]", projName === "Chirp - Twitter Clone" && "fill-black")} />
    </button>
    <button
     className={cn(
@@ -51,12 +47,7 @@ const Carousel = ({ images, projName }: { images: StaticImageData[]; projName: s
     )}
     onClick={scrollNext}
    >
-    <FaChevronRight
-     className={cn(
-      "fill-white w-4 h-4 relative -right-[1px]",
-      projName === "Chirp - Twitter Clone" && "fill-black"
-     )}
-    />
+    <FaChevronRight className={cn("fill-white w-4 h-4 relative -right-[1px]", projName === "Chirp - Twitter Clone" && "fill-black")} />
    </button>
   </div>
  );

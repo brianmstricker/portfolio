@@ -9,9 +9,10 @@ type ProjectNamesProps = {
  projectCodes: (string | undefined)[];
  project: string | null;
  setProject: (project: string | null) => void;
+ projectTags: (string | undefined)[];
 };
 
-const ProjectNames = ({ projectNames, project, setProject, projectCodes, projectSites }: ProjectNamesProps) => {
+const ProjectNames = ({ projectNames, project, setProject, projectCodes, projectSites, projectTags }: ProjectNamesProps) => {
  const [finished, setFinished] = useState(true);
  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   if (!finished) return;
@@ -33,7 +34,7 @@ const ProjectNames = ({ projectNames, project, setProject, projectCodes, project
   }
  };
  return (
-  <div className="flex flex-col sm:gap-4 lg:w-[275px] xl:w-[300px]">
+  <div className="flex flex-col gap-1 sm:gap-8 lg:w-[275px] xl:w-[300px] whitespace-nowrap">
    {projectNames.map((projName) => (
     <button
      onClick={handleClick}
@@ -57,6 +58,16 @@ const ProjectNames = ({ projectNames, project, setProject, projectCodes, project
       </div>
      )}
      <span className="text-sm lg:text-lg">{projName}</span>
+     {projectTags[projectNames.indexOf(projName)] && (
+      <span
+       className={cn(
+        "text-xs text-stone-200 bg-orange-600 p-0.5 sm:p-1 rounded-md absolute sm:-bottom-6 sm:left-0 pointer-events-none ml-2 mt-1.5 sm:ml-0 sm:mt-0",
+        project === projName ? "opacity-100 duration-1000 ease-in-out" : "opacity-0 duration-0"
+       )}
+      >
+       {projectTags[projectNames.indexOf(projName)]}
+      </span>
+     )}
      {project !== projName && <div className="w-full h-[2px] rounded-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-600" />}
     </button>
    ))}
