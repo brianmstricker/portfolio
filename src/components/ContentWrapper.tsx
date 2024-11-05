@@ -19,10 +19,10 @@ import rides4 from "../assets/rides4.png";
 
 const projects = [
  {
-  name: "Airbnb Clone",
+  name: "barebnb - Airbnb Clone",
   images: [airbnb, airbnb1, airbnb2, airbnb7, airbnb9, airbnb10],
   text: "React, Next.js, Tailwind, Prisma, Typescript",
-  site: "",
+  site: "https://barebnb.vercel.app",
   code: "https://github.com/brianmstricker/airbnb-clone",
   description:
    "This is a clone of Airbnb that comes with full booking functionality, image carousels, complete filter and search features, sleek animations, image display modals that are shareable, favorites, and a sleek mobile design.",
