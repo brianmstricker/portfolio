@@ -8,7 +8,7 @@ type HeaderProps = {
  setSection: (section: string) => void;
 };
 
-const links = ["about", "projects", "skills"];
+const links = ["about", "projects", "skills", "resume"];
 
 const Header = ({ section, setSection }: HeaderProps) => {
  const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -32,7 +32,7 @@ const Header = ({ section, setSection }: HeaderProps) => {
          name={link}
          tabIndex={section === link ? -1 : 0}
         >
-         <span className="text-[15px] sm:text-base">{link}</span>
+         <span className="text-[15px] sm:text-base capitalize">{link}</span>
         </button>
         {section !== link && (
          <div className="bg-orange-400 -bottom-1 rounded-full absolute w-0 h-0 opacity-0 group-hover:w-full group-hover:h-1 group-hover:opacity-100 group-focus-within:w-full group-focus-within:h-1 group-focus-within:opacity-100 transition-all duration-200 mx-auto" />

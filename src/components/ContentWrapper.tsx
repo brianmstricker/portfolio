@@ -77,6 +77,7 @@ const ContentWrapper = () => {
    >
     <HomeContentRightSide
      section={section}
+     setSection={setSection}
      projectNames={projects.map((project) => project.name)}
      projectSites={projects.map((project) => project.site)}
      projectCodes={projects.map((project) => project.code)}

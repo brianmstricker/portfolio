@@ -1,9 +1,11 @@
 "use client";
 import ProjectNames from "./ProjectNames";
+import Resume from "./Resume";
 import Skills from "./Skills";
 
 type HomeContentRightSideProps = {
  section: string;
+ setSection: (section: string) => void;
  projectNames: string[];
  projectSites: (string | undefined)[];
  projectCodes: (string | undefined)[];
@@ -14,6 +16,7 @@ type HomeContentRightSideProps = {
 
 const HomeContentRightSide = ({
  section,
+ setSection,
  projectNames,
  projectSites,
  projectCodes,
@@ -34,6 +37,7 @@ const HomeContentRightSide = ({
     />
    )}
    {section === "skills" && <Skills />}
+   {section === "resume" && <Resume setSection={setSection} />}
   </div>
  );
 };
