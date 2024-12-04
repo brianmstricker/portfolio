@@ -107,7 +107,7 @@ const Resume = ({ setSection }: { setSection: (section: string) => void }) => {
            button.onClick(setScale);
            break;
           case "Download":
-           button.onClick(console.log("here"));
+           button.onClick();
            break;
          }
         }}
