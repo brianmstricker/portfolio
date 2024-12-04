@@ -36,7 +36,14 @@ const Resume = ({ setSection }: { setSection: (section: string) => void }) => {
   {
    text: "Download",
    icon: <FiDownload />,
-   onClick: () => {},
+   onClick: () => {
+    const link = document.createElement("a");
+    link.href = `./Brian-Stricker-Resume.pdf`;
+    link.download = "Brian-Stricker-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+   },
   },
  ];
 
